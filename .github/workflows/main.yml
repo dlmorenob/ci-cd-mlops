@@ -1,0 +1,9 @@
+name: CI/CD para ML con MLFLOW
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+    ml_pipeline:
+        runs-on: 
