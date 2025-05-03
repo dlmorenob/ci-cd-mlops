@@ -100,7 +100,7 @@ try:
             sk_model=model,
             artifact_path="model"
         )
-        print(f" Modelo registrado correctamente. MSE: {mse:.4f}")✅
+        print(f" Modelo registrado correctamente. MSE: {mse:.4f}")
 except Exception as e:
     print(f"\n--- ERROR durante la ejecución de MLflow ---")
     traceback.print_exc()
