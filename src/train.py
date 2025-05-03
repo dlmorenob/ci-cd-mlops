@@ -14,7 +14,8 @@ print(f"--- Debug: Initial CWD: {os.getcwd()} ---")
 
 # --- Define Paths ---
 # Usar rutas absolutas dentro del workspace del runner
-workspace_dir = os.getcwd() # Debería ser /home/runner/work/mlflow-deploy/mlflow-deploy
+#workspace_dir = os.getcwd() # Debería ser /home/runner/work/mlflow-deploy/mlflow-deploy
+workspace_dir = "/home/david/Documents/maestria_ean_ciencias_datos/mlops/ci_cd_mlops/ci-cd-mlops"
 mlruns_dir = os.path.join(workspace_dir, "mlruns")
 tracking_uri = "file://" + os.path.abspath(mlruns_dir)
 # Definir explícitamente la ubicación base deseada para los artefactos
@@ -91,7 +92,7 @@ try:
         expected_artifact_uri_base = os.path.join(artifact_location, run_id, "artifacts")
         if actual_artifact_uri != expected_artifact_uri_base:
             print(f"--- WARNING: La URI del Artefacto del Run '{actual_artifact_uri}' no coincide exactamente con la esperada '{expected_artifact_uri_base}' (esto puede ser normal si la estructura difiere ligeramente). Lo importante es que NO sea la ruta local incorrecta. ---")
-            if "/home/manuelcastiblan/" in actual_artifact_uri:
+            if "/home/david/Documents/maestria_ean_ciencias_datos/mlops/ci_cd_mlops/ci-cd-mlops" in actual_artifact_uri:
                 print(f"--- ¡¡¡ERROR CRÍTICO!!!: La URI del Artefacto del Run '{actual_artifact_uri}' TODAVÍA contiene la ruta local incorrecta! ---")
         
         mlflow.log_metric("mse", mse)
