@@ -14,8 +14,8 @@ print(f"--- Debug: Initial CWD: {os.getcwd()} ---")
 
 # --- Define Paths ---
 # Usar rutas absolutas dentro del workspace del runner
-#workspace_dir = os.getcwd() # Debería ser /home/runner/work/mlflow-deploy/mlflow-deploy
-workspace_dir = "/home/david/Documents/maestria_ean_ciencias_datos/mlops/ci_cd_mlops/ci-cd-mlops"
+workspace_dir = os.getcwd() # Debería ser /home/runner/work/mlflow-deploy/mlflow-deploy
+#workspace_dir = "/home/david/Documents/maestria_ean_ciencias_datos/mlops/ci_cd_mlops/ci-cd-mlops"
 mlruns_dir = os.path.join(workspace_dir, "mlruns")
 tracking_uri = "file://" + os.path.abspath(mlruns_dir)
 # Definir explícitamente la ubicación base deseada para los artefactos
