@@ -28,8 +28,8 @@ print(f"🔍 MSE del modelo: {mse:.4f} (umbral: {THRESHOLD})")
 
 # Validación
 if mse <= THRESHOLD:
-    print("  El modelo cumple los criterios de calidad.")✅
+    print("  El modelo cumple los criterios de calidad.")
     sys.exit(0)  # éxito
 else:
-    print("  El modelo no cumple el umbral. Deteniendo pipeline.")❌
+    print("  El modelo no cumple el umbral. Deteniendo pipeline.")
     sys.exit(1)  # error
