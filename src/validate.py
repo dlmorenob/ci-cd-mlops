@@ -55,7 +55,8 @@ except Exception as e:
 # --- Predicción y Validación ---
 print("--- Debug: Realizando predicciones ---")
 try:
-    y_pred = model.predict(X_test)
+    y_pred1 = model.predict(X_test)
+    y_pred  = y_pred1
     mse = mean_squared_error(y_test, y_pred)
     print(f"🔍 MSE del modelo: {mse:.4f} (umbral: {THRESHOLD})")
 
