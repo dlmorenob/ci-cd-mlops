@@ -22,6 +22,10 @@ print(f"--- Debug: Dimensiones de X_test: {X_test.shape} ---")
 
 # --- Cargar modelo desde MLflow ---
 print("--- Debug: Intentando cargar modelo desde MLflow ---")
+print("--- Debug: Intentando cargar modelo desde MLflow ---")
+print("--- Debug: Intentando cargar modelo desde MLflow ---")
+print("--- Debug: Intentando cargar modelo desde MLflow ---")
+
 try:
     experiment_name = "CI-CD-Lab2"
     experiment = mlflow.get_experiment_by_name(experiment_name)
