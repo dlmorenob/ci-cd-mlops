@@ -77,7 +77,7 @@ preds = model.predict(X_test)
 mse = mean_squared_error(y_test, preds)
 
 # --- Iniciar Run de MLflow ---
-print(f"--- Debug: Iniciando run de MLflow en Experimento ID: {experiment_id} ---")
+print(f"-- Debug: Iniciando run de MLflow en Experimento ID: {experiment_id} ---")
 # Añadir ID aquí
 run = None
 try:
